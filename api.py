@@ -2,6 +2,8 @@ import http.client
 import json
 from urllib import parse
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+from os import getenv
 
 conn = http.client.HTTPSConnection("login.microsoftonline.com")
 payload = json.dumps({
@@ -23,7 +25,10 @@ data = res.read()
 
 html = BeautifulSoup(data.decode("utf-8"), 'lxml')
 
-payload = 'UserName=oscar.webb162&Password=***REMOVED***&AuthMethod=FormsAuthentication'
+load_dotenv('password.env')
+password = getenv('PASSWORD')
+
+payload = f'UserName=oscar.webb162&Password={password}&AuthMethod=FormsAuthentication'
 
 headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -36,5 +41,5 @@ url = parsedurl.path + "?username=oscar.webb162%40education.nsw.gov.au&" + parse
 
 conn.request("POST", url, payload)
 res = conn.getresponse()
-data = res.
+data = res.read()
 print(data)

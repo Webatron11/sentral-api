@@ -2,7 +2,7 @@ from requests import *
 from conversion import convertjson
 
 headers = {
-	'Cookie': '_ga=GA1.1.1629483037.1675392011; _ga_0ZMCE92ST2=GS1.1.1706743280.2.1.1706743308.0.0.0; PortalSID=dab52b091a987584d34d497b543f0de1; PortalLoggedIn=1; device=desktop',
+	'Cookie': '_ga=GA1.1.1629483037.1675392011; _ga_0ZMCE92ST2=GS1.1.1706743280.2.1.1706743308.0.0.0; PortalSID=ea80be41a4d111ad3122b8d0a793ac94; PortalLoggedIn=1; device=desktop',
 	'Accept': 'application/json, text/plain, */*',
 	'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; rv:121.0) Gecko/20100101 Firefox/121.0',
 	'Accept-Language': 'en-US,en;q=0.5',
